@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML and value</title>
+
+</head>
+
+<body>
+    <div data-x="a">pankaj Rathore</div>
+    <p class="myperegraph"></p>
+
+    <form>
+        
+        <input type="text" id="fullname">
+        <section id="gender">
+            <option value="male">male</option>
+            <option value="female">fmale</option>
+            <option value="other">other</option>
+            <input type="button" name="submit" onclick="submitdata()">
+
+            <button onclick="click()">submit Now</button>
+
+        </section>
+    </form>
+    <script>
+        let p = document.querySelector('div[data-x="a"]');
+        let r = document.querySelector("p.myperegraph");
+        console.log(document.querySelector('div[data-x="a"]'))
+        console.log(document.querySelector("p.myperegraph"))
+
+        let fullname =document.querySelector("#fullname");
+        console.log(p.innerHTML)
+        console.log(r.innerHTML);
+
+        function pk(){
+            fullname.value= "hello "+p.innerHTML
+            console.log(p.innerHTML)
+        }
+        pk();
+        let d1=document.querySelector("input#fullname");
+        let d2=document.querySelector("select#gender");
+
+        function submitdata(){
+            console.log(d.value);
+            console.log(d2.value);
+        }
+    </script>
+
+</body>
+
+</html>
